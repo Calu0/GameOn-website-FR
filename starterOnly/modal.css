@@ -174,14 +174,14 @@ main {
   .bground {
     background-color: transparent;
     bottom: 0;
-    height: 90vh;
+    height: 91vh;
     top: unset;
   }
   .bground .content {
     margin: 0;
     max-width: 100%;
     border-radius: 0;
-    height: 90vh;
+    height: 91vh;
     bottom: 0;
   }
 }
