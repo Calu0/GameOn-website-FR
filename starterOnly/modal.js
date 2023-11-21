@@ -20,6 +20,9 @@ const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const closeBtn = document.querySelectorAll(".close");
 const navBar = document.querySelector("#myTopnav");
+const form = document.querySelector("form");
+const submitBtn = document.querySelector(".btn-submit");
+const confirmationMessage = document.querySelector(".confirmation");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -36,4 +39,76 @@ closeBtn.forEach((btn) => btn.addEventListener("click", closeModal));
 function closeModal() {
   modalbg.style.display = "none";
 }
+
+// show confirmation message when form is submitted for 2.5 secondes
+function showConfirmationMessage() {
+  confirmationMessage.style.display = "flex";
+  setTimeout(hideConfirmationMessage, 2500);
+}
+
+// submit form event
+submitBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  showConfirmationMessage();
+  closeModal();
+});
+
+// // check if the input is valid
+// function isValidInput(input) {
+//   return input.value.length >= input.minLength;
+// }
+
+// // check if the input is valid
+// function isEmailValid(input) {
+//   const regex = /\S+@\S+\.\S+/;
+//   return regex.test(input.value);
+// }
+
+// // check if the input is valid
+// function isBirthdateValid(input) {
+//   const regex = /^\d{4}-\d{2}-\d{2}$/;
+//   return regex.test(input.value);
+// }
+
+// // check if the input is valid
+// function isQuantityValid(input) {
+//   return input.value > 0;
+// }
+
+// // check if the input is valid
+// function isLocationValid(input) {
+//   return input.checked;
+// }
+
+// // check if the input is valid
+// function isTosValid(input) {
+//   return input.checked;
+// }
+
+// // check if the input is valid
+// function isFormValid() {
+//   return isValidInput(firstname) &&
+//     isValidInput(lastname) &&
+//     isEmailValid(email) &&
+//     isBirthdateValid(birthdate) &&
+//     isQuantityValid(quantity) &&
+//     isLocationValid(location1) &&
+//     isLocationValid(location2) &&
+//     isLocationValid(location3) &&
+//     isLocationValid(location4) &&
+//     isLocationValid(location5) &&
+//     isLocationValid(location6) &&
+//     isTosValid(tos);
+// }
+
+// // add event listener to the form
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   showConfirmationMessage();
+//   setTimeout(hideConfirmationMessage(), 5000);
+// });
+
+
+
+
 

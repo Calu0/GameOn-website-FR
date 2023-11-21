@@ -565,6 +565,20 @@ footer {
   }
 }
 
+.confirmation {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: #232323;
+  color: white;
+}
+
 @keyframes modalopen {
   from {
     opacity: 0;
