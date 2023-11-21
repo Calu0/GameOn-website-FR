@@ -46,6 +46,11 @@ function showConfirmationMessage() {
   setTimeout(hideConfirmationMessage, 2500);
 }
 
+// hide confirmation message after 5 secondes
+function hideConfirmationMessage() {
+  confirmationMessage.style.display = "none";
+}
+
 // submit form event
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -101,12 +106,6 @@ submitBtn.addEventListener("click", (e) => {
 //     isTosValid(tos);
 // }
 
-// // add event listener to the form
-// form.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   showConfirmationMessage();
-//   setTimeout(hideConfirmationMessage(), 5000);
-// });
 
 
 
