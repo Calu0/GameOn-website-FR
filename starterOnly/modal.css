@@ -566,7 +566,7 @@ footer {
 }
 
 .confirmation {
-  position: absolute;
+  position: fixed;
   display: none;
   top: 0;
   left: 0;
@@ -577,6 +577,7 @@ footer {
   z-index: 1000;
   background-color: #232323;
   color: white;
+  overflow: hidden;
 }
 
 @keyframes modalopen {
