@@ -580,6 +580,11 @@ footer {
   overflow: hidden;
 }
 
+.confirmation h2 {
+  padding: 24px;
+  text-align: center;
+}
+
 @keyframes modalopen {
   from {
     opacity: 0;
