@@ -8,9 +8,8 @@ function editNav() {
 
 // close menu event when click outside
 window.onclick = function (event) {
-  var x = document.getElementById("myTopnav");
-  if (!event.target.closest('#myTopnav') && x.className === "topnav responsive") {
-    x.className = "topnav";
+  if (!event.target.closest('#myTopnav') && navBar.className === "topnav responsive") {
+    navBar.className = "topnav";
   }
 };
 
@@ -35,7 +34,7 @@ const location4 = document.querySelector("#location4");
 const location5 = document.querySelector("#location5");
 const location6 = document.querySelector("#location6");
 const conditions = document.querySelector("#checkbox1");
-
+const allLocations = document.querySelectorAll(".checkbox-input");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
