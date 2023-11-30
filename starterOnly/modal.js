@@ -1,3 +1,5 @@
+
+
 function editNav() {
   if (navBar.className === "topnav") {
     navBar.className += " responsive";
@@ -6,12 +8,6 @@ function editNav() {
   }
 }
 
-// close menu event when click outside
-window.onclick = function (event) {
-  if (!event.target.closest('#myTopnav') && navBar.className === "topnav responsive") {
-    navBar.className = "topnav";
-  }
-};
 
 // DOM Elements
 const modalbg = document.querySelector(".bground");
@@ -51,6 +47,14 @@ closeBtn.forEach((btn) => btn.addEventListener("click", closeModal));
 function closeModal() {
   modalbg.style.display = "none";
 }
+
+
+// close menu event when click outside
+window.onclick = function (event) {
+  if (!event.target.closest('#myTopnav') && navBar.className === "topnav responsive") {
+    navBar.className = "topnav";
+  }
+};
 
 // show confirmation message when form is submitted for 2.5 secondes
 function showConfirmationMessage() {
@@ -100,9 +104,9 @@ function checkDate() {
 
 
 function checkQuantity() {
-  if (quantity.value == "") {
+  if (quantity.value == "" || quantity.value < 0) {
     quantity.parentElement.setAttribute("data-error-visible", "true");
-    quantity.parentElement.setAttribute("data-error", "Veuillez entrer un nombre.");
+    quantity.parentElement.setAttribute("data-error", "Veuillez entrer un nombre valide.");
     return false;
   } else {
     quantity.parentElement.setAttribute("data-error-visible", "false");
